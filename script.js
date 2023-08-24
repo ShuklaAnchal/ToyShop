@@ -39,17 +39,34 @@ function pageOneAnimation(){
     })
 }
 
-gsap.from("#page2",{
-  background:" linear-gradient( to top, #D6DBE4,#F9FFFF, #DBE0E7)",
-  duration:2,
+gsap.to("#page2",{
+  background: "linear-gradient(to top, #D6DBE4,#F9FFFF, #DBE0E7)",
+  duration:5,
 scrollTrigger:{
       trigger:"#page2",
       scroller:"body",
-      start:"top -10%",
+      start:"top 80%",
+      end:"top 60%",
+      // end:"top -90%",
       // markers:true,
       scrub:2
   }
 })
+
+gsap.to("video",{
+  opacity:0,
+  duration:10,
+  scrollTrigger:{
+    trigger:"#page2",
+    scroller:"body",
+    start:"top 80%",
+    end:"top -2%",
+    // end:"top -90%",
+    // markers:true,
+    scrub:2
+}
+})
+
 
 gsap.from("#page2 h2",{
     top:"-15%",
