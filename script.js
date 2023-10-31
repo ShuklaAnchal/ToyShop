@@ -1,18 +1,4 @@
 
-// gsap.from("#page1 button",{
-//     left:"-5%",
-//     duration:5,
-//     opacity:0,
-//     scrollTrigger:{
-//         trigger:"#page1",
-//         scroller:"body",
-//         start:"top -15%",
-//         end:"top -40%",
-        // markers:true,
-//         scrub:1
-//     }
-// })
-
 
 function pageOneAnimation(){
     var tl = gsap.timeline({
@@ -314,28 +300,34 @@ document.querySelectorAll("#button").forEach((elm)=>{
 })
 
 var swiper = new Swiper(".mySwiper", {
-    slidesPerView: 1,
+    slidesPerView: 2,
     spaceBetween: 10,
     pagination: {
       el: ".swiper-pagination",
       clickable: true,
+      bulletClass:`swiper-pagination-bullet `
     },
+
     breakpoints: {
       "@0.00": {
         slidesPerView: 1,
-        spaceBetween: 10,
+        spaceBetween: 6,
       },
       "@0.75": {
         slidesPerView: 2,
-        spaceBetween: 20,
+        spaceBetween: 10,
       },
       "@1.00": {
         slidesPerView: 3,
-        spaceBetween: 30,
+        spaceBetween: 15,
       },
       "@1.50": {
         slidesPerView: 4,
-        spaceBetween: 40,
+        spaceBetween: 20,
+      },
+      "@1.70": {
+        slidesPerView: 5,
+        spaceBetween: 25,
       },
     },
   });
